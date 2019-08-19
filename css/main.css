@@ -207,7 +207,7 @@
   transform: translate(-50%, -50%);
   transform: rotate(-20deg);
 }
-
+/*sguzmanm: Be careful with these corner texts, in mobile they don´t look good since there is an absolute positioning, it happens in the "about" page since it has scrollable content
 .r-cornertext2 {
   position: absolute;
   top: 10%;
@@ -272,7 +272,7 @@
 }
 
 @media only screen and (max-width: 400px){
-
+  /*sguzmanm: In my opinion, it is not great to have a background-repeat on mobile*/
   [class*="bodyindex"]{background-repeat: repeat-y;}
   [class*="bodyhome"]{background-repeat: repeat-y;}
   [class*="bodycareer"]{background-repeat: repeat-y;}
@@ -309,6 +309,7 @@
   [class*="greentext"]{font-size: 3em;}  
   [class*="bluetext"]{font-size: 5em;}
 
+   /*sguzmanm: In my opinion, it is not great to have a background-repeat on mobile*/
   [class*="bodyindex"]{background-repeat: repeat-y;}
   [class*="bodyhome"]{background-repeat: repeat-y;}
   [class*="bodycareer"]{background-repeat: repeat-y;}
