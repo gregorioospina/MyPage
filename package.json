@@ -21,6 +21,8 @@
     "eslint": "^6.1.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "scss": "^0.2.4"
   }
 }

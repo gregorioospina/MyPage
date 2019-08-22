@@ -327,3 +327,12 @@
     height: 20%;
   }
 }
+
+.yellow_easteregg{
+  color: yellow;
+  text-decoration: none;
+}
+.yellow_easteregg:hover{
+  color: yellow;
+  text-decoration: none;
+}
