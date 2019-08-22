@@ -15,4 +15,4 @@ Systems and Computing Engineering student <br>
 @ Los Andes University, Colombia.
 
 
-<a href="https://gregorioospina.github.io/src/home/home.html"> Use this link to go to the page! </a>
+<a href="https://gregorioospina.com"> Use this link to go to the page! </a>
