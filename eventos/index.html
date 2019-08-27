@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../js/eventos.js"></script>
   <title>Eventos</title>
 </head>
 <body>
@@ -17,20 +18,23 @@
   Firme? Porfavor ingrese sus datos
 </div>
 <div>
-    <form class="form-horizontal" action="https://docs.google.com/forms/d/e/1FAIpQLSeE5SJZGqpwE0eoH48T0QVWIoromBbnsz6zjP7vEVOx5xY7jw/formResponse">
+    <form class="form-horizontal" id="formf">
       <div class="form-group">
         <label for="email">Nombre</label>
         <input type="email" class="form-control" id="email">
       </div>
       <div class="form-group">
-        <label for="pwd">Power Ranger favorito</label>
+        <label for="pwd">Color Favorito</label>
         <input type="password" class="form-control" id="pwd">
       </div>
-      <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" id="botonf" class="btn btn-default">Submit</button>
     </form> 
+</div>
+<div> <br>
+  <a>Los firmes</a>
+  <ul id="ulppl">
+
+  </ul>
 </div>
   
 </body>
