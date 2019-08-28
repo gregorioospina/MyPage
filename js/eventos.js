@@ -12,7 +12,7 @@ window.onload = () => {
       let nmb = data.personas[i].nombre;
       let clr = data.personas[i].color;
 
-      let str = "<li> " + nmb + ", spirit animal: " + clr + " </li>"
+      let str = "<li> " + nmb + ", <a id=\"enfasis\"> juego que quiere ver: </a>" + clr + " </li>"
       html += str;
     }
     document.getElementById("ulppl").innerHTML = html;
