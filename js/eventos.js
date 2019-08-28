@@ -11,8 +11,9 @@ window.onload = () => {
     {
       let nmb = data.personas[i].nombre;
       let clr = data.personas[i].color;
+      let colorid = i%3;
 
-      let str = "<li> " + nmb + ", juego que quiere ver: " + clr + " </li>"
+      let str = "<li id=\"color"+colorid+"\"> " + nmb + ", juego que quiere ver: " + clr + " </li>"
       html += str;
     }
     document.getElementById("ulppl").innerHTML = html;
