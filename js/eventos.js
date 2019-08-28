@@ -12,7 +12,7 @@ window.onload = () => {
       let nmb = data.personas[i].nombre;
       let clr = data.personas[i].color;
 
-      let str = "<li> " + nmb + ", <a id=\"enfasis\"> juego que quiere ver: </a>" + clr + " </li>"
+      let str = "<li> " + nmb + ", juego que quiere ver: " + clr + " </li>"
       html += str;
     }
     document.getElementById("ulppl").innerHTML = html;
@@ -29,6 +29,7 @@ const evnts = () => {
 
 function post(){
   let form = document.getElementById("formf");
+  console.log(form);
   let nmb = form.children[0].children[1].value;
   form.children[0].children[1].value = "";
   let clr = form.children[1].children[1].value;
@@ -39,7 +40,6 @@ function post(){
   client.post(URL, bod, res => {
     console.log(res)
   })  
-  console.log(bod);
 }
 
 
