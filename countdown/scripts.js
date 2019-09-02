@@ -7,8 +7,6 @@ let countdown = setInterval(function() {
   const today = new Date().getTime();
   
   const diff = chosenDate - today;
-  console.log(diff);
-  console.log(chosenDate);
 
   
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
