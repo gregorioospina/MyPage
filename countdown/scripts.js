@@ -23,7 +23,8 @@ let countdown = setInterval(function() {
   <div class=\"c-number\">" + minutes + "</div>minutes</div> \
 <div class=\"seconds\"> \
   <div class=\"c-number\">" + seconds + "</div>seconds</div> \
-<div class=\"left\">LEFT</div>\
+<div> <a class=\"left\" href=\"../eventos/index.html\"> RESPONDE EL SONDEO!</a> </div>\
 </div>";
 
 }, 1000);
+

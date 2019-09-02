@@ -49,23 +49,34 @@ h1 sup {
 }
 
 .days {
-  background: #D87200;
+  background: #abe188;
+  color: #333;
 }
 
 .hours {
-  background:  #FF3E41;
+  background:  #f7ef99;
+  color: #333;
 }
 
 .minutes {
-  background: #FFB20C;
+  background: #f1bb87;
+  color: #333;
 }
 
 .seconds {
-  background:  #2186FF;
+  background:  #f78e69;
+  color: #333;
+}
+
+.posish{
+  position: relative;
 }
 
 .left {
-	background: #E10A0A;
+  background: #5d675b;
+  color : white;
+  margin:15px;
+  text-decoration: none;
 }
 .c-number {
   font-family: "Montserrat", sans-serif;
