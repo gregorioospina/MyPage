@@ -46,11 +46,18 @@ h1 sup {
   padding: 20px;
   width: 120px;
   border-radius: 10px;
+  transition-duration: 1s; 
 }
+
 
 .days {
   background: #abe188;
   color: #333;
+}
+
+.hours:hover, .days:hover, .seconds:hover, .minutes:hover{
+  background-color: black;;
+  transition-duration: 1s;
 }
 
 .hours {

@@ -14,17 +14,11 @@ let countdown = setInterval(function() {
   let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  document.getElementById("countdown").innerHTML =
-    "<div class=\"days\"> \
-  <div class=\"c-number\">" + days + "</div>days</div> \
-<div class=\"hours\"> \
-  <div class=\"c-number\">" + hours + "</div>hours</div> \
-<div class=\"minutes\"> \
-  <div class=\"c-number\">" + minutes + "</div>minutes</div> \
-<div class=\"seconds\"> \
-  <div class=\"c-number\">" + seconds + "</div>seconds</div> \
-<div> <a class=\"left\" href=\"../eventos/index.html\"> RESPONDE EL SONDEO!</a> </div>\
-</div>";
+  document.getElementById("day").textContent = days;
+  document.getElementById("hour").textContent = hours;
+  document.getElementById("minute").textContent = minutes;
+  document.getElementById("second").textContent = seconds;
 
-}, 1000);
+
+},1000);
 
