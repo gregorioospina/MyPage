@@ -51,6 +51,13 @@
 #instagram{
   background-image: url("../img/inst.jpg");
 }
+#cv{
+  background-color: #021326;
+}
+#cv-viewer{
+  width:800px;
+  height:900px;
+}
 
 .btn-circle {
   width: 80px;
