@@ -59,6 +59,10 @@
   height:900px;
 }
 
+#smallest{
+  font-size: 15px;
+}
+
 .btn-circle {
   width: 80px;
   height: 30px;
