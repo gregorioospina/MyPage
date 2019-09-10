@@ -6,41 +6,75 @@ window.onload = () => {
 
   client.get(URL, res => {
     let data = res;
+    console.log(data);
 
     for(let i = 0; i<data.personas.length; i++)
     {
       let nmb = data.personas[i].nombre;
-      let clr = data.personas[i].color;
-      let colorid = i%3;
+      let clr = data.personas[i].check;
+      let cpo = data.personas[i].cupo;
 
-      let str = "<li id=\"color"+colorid+"\"> " + nmb + ", juego que quiere ver: " + clr + " </li>"
+      let colorid = cpo === 0? 0 : 1;
+      let lleva = cpo === 0? " no lleva carro": " lleva carro, con "+cpo+" cupos";
+
+      let str = "<li id=\"color"+colorid+"\"> " + nmb + lleva + " </li>"
       html += str;
     }
     document.getElementById("ulppl").innerHTML = html;
-
   });
 }
 
 
 const evnts = () => {
-  document.getElementById("botonf").addEventListener("click", post) 
-  debugger;
+  document.getElementById("formf").addEventListener("input", inputchange);
+  document.getElementById("formcheck").addEventListener("click", notCheckedYes);
+  
+}
 
+function notCheckedYes(){
+  let check = checkvalue();
+  if(check === 1){
+    document.getElementById("rangeform").hidden = false;
+  }
+  else if(check === 0){
+    document.getElementById("rangeform").hidden = true;}
+}
+
+function inputchange() {
+  let value = document.getElementById("cuposinput").valueAsNumber;
+  document.getElementById("labelcupos").textContent = value;
+}
+
+function checkvalue(){
+  let yes =  document.getElementById("yesradio").checked ? 1 : 0;
+  let no = document.getElementById("noradio").checked ? 2 : 0;
+  if(yes === 0 & no === 0){
+    return 3;
+  }
+  return yes === 1? 1 : 0;
 }
 
 function post(){
   let form = document.getElementById("formf");
   console.log(form);
-  let nmb = form.children[0].children[1].value;
-  form.children[0].children[1].value = "";
-  let clr = form.children[1].children[1].value;
-  form.children[1].children[1].value = "";
-
+  let nombre = document.getElementById("nombre").value;
+  let check = checkvalue();
+  if(check === 3)
+  {
+    console.log("debe escoger una opcion");
+    return;
+  }
+  let cupo = 0;
+  if(check === 1)
+  {
+    cupo = document.getElementById("cuposinput").valueAsNumber;
+  }
   let client = new HttpClient();
-  let bod = nmb.trim()+","+clr.trim();
+  let bod = nombre.trim()+","+check+","+cupo;
   client.post(URL, bod, res => {
-    console.log(res)
+    console.log(res);
   })  
+  console.log("se realizo exitosamente");
 }
 
 
@@ -65,3 +99,5 @@ var HttpClient = function() {
     });
   };
 }
+evnts();
+
