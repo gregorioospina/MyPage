@@ -17,7 +17,7 @@ window.onload = () => {
       let colorid = cpo === 0? 0 : 1;
       let lleva = cpo === 0? " no lleva carro": " lleva carro, con "+cpo+" cupos";
 
-      let str = "<li id=\"color"+colorid+"\"> " + nmb + lleva + " </li>"
+      let str = "<li id=\"color"+colorid+"\"> " + nmb + lleva + " Andres es un capo, gregorio proteja su codigo mejor"+" </li>"
       html += str;
     }
     document.getElementById("ulppl").innerHTML = html;
